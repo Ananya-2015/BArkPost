@@ -1,0 +1,20 @@
+<form style="margin-left: 100px; margin-right: 100px;">  
+            <h1>Login here</h1>  
+    <br>
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter your email" name="email" [(ngModel)]="email" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Enter your password" name="password" [(ngModel)]="password" required>
+    </div>
+    
+    <br>
+    
+    <a  class="btn btn-primary" (click)="login()" style="margin-right: 10px;">Login</a>
+    <br>
+    <br>
+    <div class="alert alert-warning" *ngIf="showalert">{{alertmsg}}</div>
+
+
+  </form>

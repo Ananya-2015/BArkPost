@@ -1,0 +1,19 @@
+<form style="margin-left: 100px; margin-right: 100px;">  
+              <h1>Register here.</h1>
+    <br>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter your name " name="name" [(ngModel)]="name" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter your Email" name="email" [(ngModel)]="email" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Enter your password " name="password" [(ngModel)]="password" required>
+    </div>
+    <br>
+    <a  class="btn btn-primary" (click)="register()" [routerLink]="'/addPost'" style="margin-right: 10px;">Register</a>
+
+
+  </form>

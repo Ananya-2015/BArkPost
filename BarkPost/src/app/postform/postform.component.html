@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="col-md-4"></div>
+  <div class="col-md-4" style="color: cornsilk;"><h3>Create</h3></div>
+  <div class="col-md-4"> 
+    <h6 style="color: cornsilk; margin-left:300px ;">{{userName}}</h6>
+    <a    (click)="logout()" style=" color:cornsilk; margin-left:  300px;">Log Out</a>
+  </div>
+</nav>
+<app-navigation></app-navigation>
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-md-left">
+      <div class="col-md-4">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <figure class="figure">
+            <img src="https://images6.alphacoders.com/521/thumbbig-521489.jpg" class="create_img" >
+            <figcaption class="figure-caption">Create reviews dog food, dog toys, and dog health and care products.</figcaption>
+          </figure>
+        </div>
+     
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <figure class="figure">
+            <img src="https://images6.alphacoders.com/542/thumbbig-542761.jpg" class="create_img" >
+            <figcaption class="figure-caption"> Enjoy great stories, informative features and inspiring ideas.</figcaption>
+          </figure>
+        </div>
+
+      </div>
+      <div class="col-md-8">
+        <div class="shadow p-3 mb-5 bg-white rounded" style="height: 600px;">
+          <h1 style="text-align: center;">{{form_heading}}</h1>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwEzrByu8WLagxZgDbVHGBrGFsM19AFgRkZ3zmko_myewg9T69&usqp=CAU" class="clip-art">
+            <form style="margin-left: 100px; margin-right: 100px;">  
+              
+              <br>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter your post title" name="title" [(ngModel)]="title" required>
+              </div>
+              <br>
+              <div class="form-group">
+                  <textarea type="text" class="form-control" placeholder="Enter your Post description" name="description" [(ngModel)]="body" required></textarea>
+              </div>
+              <br>
+              
+              <a  class="btn btn-primary" (click)="addPost()" *ngIf="isdisplayAdd" [routerLink]="'/recentPost'" style="margin-right: 10px;">Post</a>
+              <a  class="btn btn-primary" (click)="edit()" *ngIf="isdisplayEdit" [routerLink]="'/recentPost'" style="margin-right: 10px;">Done</a>
+
+
+            </form>
+  
+        </div>
+      </div>
+    </div>
+</div>
+
+
